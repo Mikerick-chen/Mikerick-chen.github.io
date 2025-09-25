@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>個人履歷 — 陳韋文</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f4f7fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent1:linear-gradient(135deg,#4f46e5,#06b6d4);
+      --glass: rgba(255,255,255,0.65);
+      --radius:16px;
+      --shadow: 0 8px 30px rgba(16,24,40,0.08);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:"Noto Sans TC", "PingFang TC","Microsoft JhengHei",system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue";
+      background:var(--bg);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+      padding:36px 18px;
+    }
+
+    .page{
+      max-width:1100px;
+      margin:0 auto;
+      background:transparent;
+    }
+
+    header.hero{
+      background: var(--accent1);
+      color:white;
+      border-radius: 18px;
+      padding:28px;
+      box-shadow: var(--shadow);
+      display:flex;
+      gap:20px;
+      align-items:center;
+      margin-bottom:20px;
+    }
+    .hero .avatar{
+      width:120px;
+      height:120px;
+      border-radius:16px;
+      background:rgba(255,255,255,0.12);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:28px;
+      box-shadow: 0 6px 20px rgba(2,6,23,0.2) inset;
+      overflow:hidden;
+      flex:0 0 120px;
+    }
+    .hero .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .hero .meta{
+      flex:1;
+    }
+    .hero h1{
+      margin:0;
+      font-size:28px;
+      letter-spacing:0.2px;
+    }
+    .hero p.lead{
+      margin:8px 0 0;
+      opacity:0.95;
+      font-weight:500;
+    }
+    .hero .quote{
+      margin-top:12px;
+      font-style:italic;
+      opacity:0.95;
+      font-size:14px;
+    }
+
+    .layout{
+      display:grid;
+      grid-template-columns:320px 1fr;
+      gap:20px;
+      margin-top:18px;
+    }
+
+    aside.card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .card h3{margin:0 0 10px;font-size:16px}
+    .muted{color:var(--muted);font-size:13px}
+
+    .profile-row{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+    .pill{display:inline-block;background:#f1f5f9;color:#0f172a;padding:6px 10px;border-radius:999px;font-size:13px;margin-right:6px}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:linear-gradient(90deg,#eef2ff,#f0fdf4);padding:6px 10px;border-radius:999px;font-size:13px;color:#0f172a}
+
+    main.content{
+      background:transparent;
+    }
+
+    section.block{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow: var(--shadow);
+      margin-bottom:16px;
+    }
+    section.block h2{
+      margin:0 0 12px;
+      font-size:18px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .list{margin:0;padding:0;list-style:none}
+    .list li{padding:8px 0;border-bottom:1px dashed #eef2ff;font-size:15px}
+    .list li:last-child{border-bottom:0}
+
+    /* responsive */
+    @media (max-width:900px){
+      .layout{grid-template-columns:1fr}
+      .hero{flex-direction:row;gap:14px}
+      .hero .meta{display:block}
+    }
+
+    /* small helper */
+    .muted-block{color:var(--muted);font-size:14px}
+    .center{display:flex;align-items:center;gap:8px}
+    footer.note{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero" role="banner" aria-label="個人履歷">
+      <div class="avatar" aria-hidden="true">
+        <!-- 若要放真實照片，請替換下面 img 的 src -->
+        <img src="https://via.placeholder.com/300x300.png?text=Photo" alt="個人照片">
+      </div>
+      <div class="meta">
+        <h1>陳韋文</h1>
+        <p class="lead">來自桃園中壢 · 六和高中畢業 · 立志於智慧運算與大數據分析領域</p>
+        <p class="quote">「學習是趟長途的單車之旅，唯有堅持才能達到目標。」—— <em>Only you can change your future.</em></p>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- 左側側欄：基本資料／技能 -->
+      <aside class="card" aria-labelledby="profileTitle">
+        <h3 id="profileTitle">基本資料</h3>
+        <p class="muted">所在地</p>
+        <p>桃園市中壢區</p>
+
+        <p class="muted" style="margin-top:10px">學歷</p>
+        <p>六和高中（高中畢業）</p>
+
+        <hr style="margin:14px 0;border:0;border-top:1px solid #f1f5f9">
+
+        <h3>興趣與專長</h3>
+        <div class="muted-block">
+          <p><strong>興趣：</strong>長途騎乘、自行車旅遊、慢跑、球類運動</p>
+          <p><strong>專長：</strong>時間規劃與管理、程式撰寫（Python、基礎前端）、資料分析入門</p>
+          <p><strong>個性：</strong>擅長溝通、積極開朗、獨立且具責任感</p>
+        </div>
+
+        <hr style="margin:14px 0;border:0;border-top:1px solid #f1f5f9">
+
+        <h3>技能（範例）</h3>
+        <div class="skills" aria-hidden="false">
+          <span class="skill">Python</span>
+          <span class="skill">OpenCV</span>
+          <span class="skill">HTML / CSS</span>
+          <span class="skill">時間管理</span>
+          <span class="skill">團隊協作</span>
+        </div>
+
+        <hr style="margin:14px 0;border:0;border-top:1px solid #f1f5f9">
+
+        <h3>語言能力</h3>
+        <p class="muted">TOEIC</p>
+        <p>目前成績：610（持續準備以提升至 780 以上）</p>
+      </aside>
+
+      <!-- 右側主內容 -->
+      <main class="content" role="main">
+        <section class="block" aria-labelledby="aboutTitle">
+          <h2 id="aboutTitle">自傳</h2>
+          <p>
+            我來自桃園市中壢區，畢業於六和高中。高中期間，我逐步發現自己對團隊合作與問題解決的興趣，因此在學習與活動中不斷磨練相關能力。我的處事原則是「嚴以律己、寬以待人」：我相信透過自我要求與謙遜的態度，能更有效地與他人合作並掌握個人的成長軌跡。
+          </p>
+        </section>
+
+        <section class="block" aria-labelledby="traitsTitle">
+          <h2 id="traitsTitle">個人特質與核心強項</h2>
+          <ul class="list">
+            <li><strong>分析能力：</strong>具備系統化整理與資料分析的能力，能從複雜資訊中萃取可執行的見解。</li>
+            <li><strong>領導能力：</strong>善於評估團隊成員的專長並進行合理分工與監督，確保任務按時達成。</li>
+            <li><strong>協調能力：</strong>能在不同角色與利害關係人之間靈活溝通，促成共識並推動專案順利進行。</li>
+          </ul>
+        </section>
+
+        <section class="block" aria-labelledby="planTitle">
+          <h2 id="planTitle">四年學習計畫</h2>
+          <ul class="list">
+            <li><strong>大一：</strong>建立穩固的專業基礎，優先完成必修並儘早修畢通識學分。</li>
+            <li><strong>大二：</strong>深化必修課程，若通識已結束則逐步啟動輔系課程規劃。</li>
+            <li><strong>大三：</strong>正式開始輔系（工業工程管理）課程，結合理論與實作，累積跨領域能力。</li>
+            <li><strong>大四：</strong>系統性準備研究所考試，並積極參與專題或實務專案以累積實作經驗。</li>
+          </ul>
+        </section>
+
+        <section class="block" aria-labelledby="futureTitle">
+          <h2 id="futureTitle">未來規劃與期許</h2>
+          <p>
+            我選擇智慧運算與大數據相關領域，期望將資訊技術與工程管理結合，將 AI 與系統設計應用於企業與健康照護領域。未來四年，我希望擴展專業人脈、累積實務專案經驗，並逐步成為一名在技術深度與管理視角上兼具優勢的跨領域人才。
+          </p>
+        </section>
+
+        <section class="block" aria-labelledby="closingTitle">
+          <h2 id="closingTitle">結語</h2>
+          <p>
+            我承認他人在某些方面可能比我優秀，但我絕不允許自己的努力少於他人。面對挑戰，我以堅定的毅力、踏實的行動，持續超越自我，朝既定目標奮進。
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <footer class="note">此網頁範本由系統自動產出；如需加入更多作品、專案或聯絡方式，我可以幫你把區塊擴充或產生 PDF 檔供下載。</footer>
+  </div>
+</body>
+</html>
