@@ -39,14 +39,7 @@
       text-align: center;
     }
 
-    aside img {
-      width: 100%;   /* 讓照片依照側欄寬度縮放 */
-    height: auto;  /* 自動算高度，維持比例 */
-    border: none;  /* 移除邊框 */
-    border-radius: 0; /* 移除圓角 */
-    box-shadow: none; /* 移除陰影效果 */
-    margin-bottom: 15px;
-    }
+    aside img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; }
 
 
     aside h1 {
@@ -130,19 +123,7 @@
         grid-template-columns: 1fr;
       }
     }
-        .circle-frame {
-        width: 200px;       /* 相框寬度 */
-        height: 200px;      /* 相框高度 */
-        border-radius: 50%; /* 變成圓形 */
-        overflow: hidden;   /* 超出部分隱藏 */
-        border: 4px solid #555; /* 可加邊框 */
-    }
 
-    .circle-frame img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;  /* 保持圖片比例並裁切 */
-    }
   </style>
 </head>
 <body>
